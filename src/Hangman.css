@@ -1,0 +1,91 @@
+.Hangman {
+  width: 400px;
+  color: black;
+  text-align: center;
+  zoom: 1.3;
+  position: relative;
+}
+
+.Hangman-img {
+  border: 10px solid white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.27),
+    0 0 40px rgba(0, 0, 0, 0.06) inset;
+}
+
+.Hangman-man {
+  position: absolute;
+  display: block;
+  top: 200px;
+  left: 175px;
+  animation: Hangman-drop 5s linear infinite;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic;
+  animation-fill-mode: freeze;
+}
+
+.Hangman-hidden {
+  display: none;
+}
+
+.Hangman h1 {
+  font-size: 4rem;
+  font-weight: 100;
+  margin-bottom: 0.1em;
+  margin-top: 0;
+}
+
+.Hangman-word {
+  letter-spacing: 1em;
+  margin: 0.4em -1em 0.2em 0;
+  font-size: 2rem;
+}
+
+.Hangman-btns {
+  text-align: center;
+  display: inline-block;
+  width: 250px;
+  margin-top: 0;
+}
+
+.Hangman button {
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 30px;
+  margin: 5px 2px 2px 2px;
+  letter-spacing: 1px;
+  outline: none;
+  background: #ffc107;
+  color: #fff;
+  box-shadow: 0 6px #ff9800;
+  border-radius: 5px;
+  padding-top: 4px;
+}
+
+.Hangman button:hover {
+  background-color: #ff9800;
+}
+
+.Hangman button:disabled {
+  background: #bdbdbd;
+  color: #eeeeee;
+  box-shadow: 0 6px #9e9e9e;
+}
+
+.Hangman-reset {
+  background: blue !important;
+  width: auto !important;
+}
+
+@keyframes Hangman-drop {
+  from {
+    transform: translateX(0px) translateY(0px);
+  }
+  10% {
+    transform: translateX(0px) translateY(100px) scaleX(1.3) scaleY(1.3);
+  }
+  to {
+    transform: translateX(800px) translateY(100px) scaleX(1.3) scaleY(1.3);
+  }
+}
